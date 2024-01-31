@@ -1,14 +1,11 @@
-
 const AddButton = ({ addClick }) => {
-
-    return (
+  return (
     <tr>
-        <td></td>
-        <td>
-            <button onClick={addClick}>Add</button>
-        </td>
+      <td>
+        <button onClick={addClick}>Add</button>
+      </td>
     </tr>
-  )
-}
+  );
+};
 
-export default AddButton
+export default AddButton;

@@ -65,7 +65,7 @@ const Task = ({ task, setData }) => {
         />
       )}
       {!isEditing && <button onClick={editTask}>Edit</button>}
-      {!isEditing && <button onClick={removeTask}>Remove</button>}
+      {!isEditing && <button onClick={removeTask}>Delete</button>}
       {isEditing && <button onClick={saveTask}>Save</button>}
       {isEditing && <button onClick={cancelEdit}>Cancel</button>}
     </div>

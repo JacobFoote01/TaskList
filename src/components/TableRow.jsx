@@ -1,22 +1,15 @@
-import ModeButtons from './ModeButtons'
-import TaskCell from './TaskCell'
-import EstTimeCell from './EstTimeCell'
+import ModeButtons from "./ModeButtons";
+import TaskCell from "./TaskCell";
+import EstTimeCell from "./EstTimeCell";
 
 const TableRow = () => {
+  return (
+    <>
+      <TaskCell />
+      <EstTimeCell />
+      <ModeButtons />
+    </>
+  );
+};
 
-    return (
-        <tr>
-            <TaskCell
-            
-            />
-            <EstTimeCell
-            
-            />
-            <ModeButtons
-            
-            />
-        </tr>
-    )
-}
-
-export default TableRow
+export default TableRow;

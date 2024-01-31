@@ -2,7 +2,7 @@ import Task from "./Task";
 
 const TaskTable = ({ data, setData }) => {
   return (
-    <div>
+    <>
       {data.length >= 1 &&
         data.map((task, index) => (
           <Task
@@ -13,7 +13,7 @@ const TaskTable = ({ data, setData }) => {
             setData={setData}
           />
         ))}
-    </div>
+    </>
   );
 };
 

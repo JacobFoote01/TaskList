@@ -1,9 +1,8 @@
-import "./App.css";
-import TableHeader from "./components/TableHeader.jsx";
 import TaskTable from "./components/TaskTable.jsx";
 import TaskInput from "./components/TaskInput.jsx";
 import { useState, useEffect } from "react";
 import * as api from "./index.js";
+import { GoChecklist } from "react-icons/go";
 
 function App() {
   const [data, setData] = useState([]);
@@ -19,8 +18,10 @@ function App() {
 
   return (
     <>
-      <h1 color="blue"> My Task List </h1>
-      <TableHeader />
+      <h1>
+        <GoChecklist />
+        Task List
+      </h1>
       <TaskInput data={data} setData={setData} />
       <TaskTable data={data} setData={setData} />
     </>

@@ -1,6 +1,6 @@
 const BASE_URL = 'http://localhost:3000'
 
-async function getTasks() {
+export const getTasks = async () => {
   try {
     const response = await fetch(`${BASE_URL}/tasks`)
     return await response.json()
@@ -9,7 +9,7 @@ async function getTasks() {
   }
 }
 
-async function addTask(task) {
+export const addTask = async (task) => {
   const response = await fetch(`${BASE_URL}/tasks`, {
     method: 'POST',
     headers: {
@@ -22,14 +22,14 @@ async function addTask(task) {
   return json;
 }
 
-async function removeTask(id) {
+export const removeTask = async (id) => {
   const response = await fetch(`${BASE_URL}/tasks/${id}`, {
     method: 'DELETE',
   })
   return await response.json()
 }
 
-async function updateTask(task) {
+export const updateTask = async (task) => {
   const response = await fetch(`${BASE_URL}/tasks/${task.id}`, {
     method: 'PUT',
     headers: {
@@ -39,5 +39,3 @@ async function updateTask(task) {
   })
   return await response.json()
 }
-
-export default { getTasks, addTask, removeTask, updateTask }

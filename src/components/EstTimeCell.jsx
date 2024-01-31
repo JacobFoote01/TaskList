@@ -1,11 +1,9 @@
-
 const EstTimeCell = () => {
   return (
-    <td>
-        <input 
-            type="text" 
-        />
-    </td> )
-}
+    <>
+      <input type="text" />
+    </>
+  );
+};
 
-export default EstTimeCell
+export default EstTimeCell;
