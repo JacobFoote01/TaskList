@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as api from "..";
 
 const Task = ({ task, setData }) => {
-  const { description, est_time } = task;
+  const { Description, Time } = task;
   const [isEditing, setIsEditing] = useState(false);
   const [input, setInput] = useState(task);
 
@@ -29,8 +29,8 @@ const Task = ({ task, setData }) => {
   const saveTask = async () => {
     const newData = await api.updateTask({
       ...task,
-      description: input.description,
-      est_time: input.est_time,
+      Description: input.Description,
+      Time: input.Time,
     });
 
     setData(newData);
@@ -44,23 +44,21 @@ const Task = ({ task, setData }) => {
 
   return (
     <div className="task">
-      {!isEditing && <p>{description}</p>}
-      {!isEditing && <p>{est_time}</p>}
+      {!isEditing && <p>{Description}</p>}
+      {!isEditing && <p>{Time}</p>}
       {isEditing && (
         <input
           type="text"
-          placeholder="description"
-          name="description"
-          value={input.description}
+          placeholder="Description"
+          value={input.Description}
           onChange={handleInputChange}
         />
       )}
       {isEditing && (
         <input
           type="text"
-          placeholder="est_time"
-          name="est_time"
-          value={input.est_time}
+          placeholder="Time"
+          value={input.Time}
           onChange={handleInputChange}
         />
       )}
