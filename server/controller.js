@@ -1,7 +1,7 @@
 let data = [
     {id:0, Description: 'Wash the Car', Time: '1 hr'},
-    {id:1, Description: 'Clean the Bathrooms', Time: '.5 hr'},
-    {id:2, Description: 'Mow the Lawn', Time: '1.5 hrs'},
+    {id:1, Description: 'Clean the Bathrooms', Time: '30 min'},
+    {id:2, Description: 'Mow the Lawn', Time: '1 hr'},
 ]
 
 function getTasks(req, res) {
